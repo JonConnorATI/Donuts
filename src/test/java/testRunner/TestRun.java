@@ -9,12 +9,13 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions
 				(
 						
-				features=".//Features/Login.feature",
+				features=".//Features/MyAccount.feature",
 				glue="stepDefinitions",
 				dryRun=false,
 				monochrome=true,
 				plugin= {"pretty","html:test-output"},
-				publish = true
+				publish = false,
+				tags = "@Test1"
 				
 				)
 

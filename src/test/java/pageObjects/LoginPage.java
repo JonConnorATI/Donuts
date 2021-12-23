@@ -1,54 +1,61 @@
 package pageObjects;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
+import baseMethods.BaseMethods;
+import static org.junit.Assert.*;
 
+public class LoginPage extends BaseMethods{
 
-
-public class LoginPage {
-	public WebDriver ldriver;
-	
-	public LoginPage(WebDriver rdriver) {
-		ldriver =rdriver;
-		PageFactory.initElements(rdriver, this);
+	public static void enterUsername(String username) {
+		enterText(By.id("username"), username);
+		
 	}
-	
-	@FindBy(id="username")
-	@CacheLookup
-	WebElement txtUserName;
-	
-	@FindBy(id="password")
-	@CacheLookup
-	WebElement txtPassword;
-	
-	@FindBy(xpath="//button[@value='Log in']")
-	@CacheLookup
-	WebElement btnLogin;
-	
-	@FindBy(linkText="Log out")
-	@CacheLookup
-	WebElement lnkLogout;
-	
-	public void setUserName(String uname) {
-		txtUserName.clear();
-		txtUserName.sendKeys(uname);
+
+	public static void enterPassword(String password) {
+		enterText(By.id("password"), password);
 		
 	}
 	
-	public void setPassword(String pwd) {
-		txtPassword.clear();
-		txtPassword.sendKeys(pwd);
-	}
-	
-	public void clickLogin() {
-		btnLogin.click();
-	}
-	
-	public void clickLogout() {
-		lnkLogout.click();
+	public static void pressLoginButton() {
+		Click(By.xpath("//button[@name='login']"));
+		
 	}
 
+	public static void checkLoginErrorMessage() {
+		assertEquals(driver.findElement(By.cssSelector(".woocommerce-error>li>a")).getText(), ("Lost Your Password?"));
+		
+	}
+
+	public static MyAccountPage checkTitle (String title) {
+		assertEquals(driver.getTitle(), (title));
+		
+		return new MyAccountPage();
+		
+		}
+
+	/*
+	 * public static void checkLoginErrorMessage(String message) {
+	 * System.out.println("We are in the lostpassword section");
+	 * assertEquals(driver.findElement(By.linkText("Lost Your Password?")).getText()
+	 * , (message));
+	 * 
+	 * 
+	 * }
+	 * 
+	 * public static void checkTitle(String message) {
+	 * System.out.println("We are in the check title");
+	 * //System.out.println("The text is: " +
+	 * driver.findElement(By.linkText("Lost Your Password?")).getText());
+	 * assertEquals(driver.getTitle(), (message)); }
+	 */
+
+	
+
+	
+	
+
+	
+
+	
+	
 }

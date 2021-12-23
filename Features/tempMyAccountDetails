@@ -1,0 +1,62 @@
+"""
+Scenario: Open the Orders link
+Orders contains - Message about orders and a Go Shop button
+
+Given I select
+|Orders| 
+Then I should see in the orders section
+|Go shop No order has been made yet.|Go shop| 
+  
+Scenario: Open the Downloads link
+Downloads contains - Message about downloads and a Go Shop button
+
+Given I select
+|Downloads|
+Then I should see in the downloads section 
+|Go shop No downloads available yet.|Go shop|
+
+Scenario: Open Coupons link 
+Coupons contains - Message about coupons
+Given I select
+|Coupons|  
+Then I should see in the coupons section
+|Sorry, No coupons available for you.|
+
+Scenario: Open Address Book link 
+Address Book contains - Message about addresses, and buttons for Add Billing, Add Shipping Addresses
+Given I select
+|Address Book|
+Then I should see in the address book section 
+|The following addresses will be used on the checkout page by default.|ADD BILLING ADDRESS|ADD SHIPPING ADDRESS|
+
+Scenario: Open Payment Methods link
+Payment Methods contains - Message about pay methods, and a button for Add Payment method
+Given I select
+|Payment methods|
+Then I should see on the payments page
+|No saved methods found.|ADD PAYMENT METHOD|
+
+ 
+
+Scenario: Open Account Details link
+Account Details contains - Name Fields, email field, password fields and a button for save changes
+Given I select
+|Account details|
+Then I should see fields in the Account details page with the labels
+|First name *|Last name *|Display name *|This will be how your name will be displayed in the account section and in reviews|Email address|
+And I should see fields to change my password with the labels
+|Current password (leave blank to leave unchanged)|New password (leave blank to leave unchanged)|Confirm new password|
+And I should see a button with text
+|Save changes|
+
+
+Scenario: Log out
+If I select Log out I should go back to the home page
+When I select the <Logout> button  
+|Logout|
+Then I should be in the home page 
+
+"""
+ 
+
+#Logout
