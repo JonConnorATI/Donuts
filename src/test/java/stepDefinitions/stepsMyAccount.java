@@ -13,7 +13,7 @@ public class stepsMyAccount extends BaseMethods {
 	
 	
 	@Given("I login with valid account details")
-	public void i_login_with_valid_account_details(DataTable usercredentials) {
+	public void i_login_with_valid_account_details(DataTable usercredentials) throws InterruptedException {
 		
 		navigateToHomePage();
 		HomePage.acceptCookies();
@@ -26,6 +26,8 @@ public class stepsMyAccount extends BaseMethods {
 		
 		
 	}
+	
+	/*Steps for the Dashboard section*/
 	
 	@Then("I should land in the account dashboard")
 	public void i_should_land_in_the_account_dashboard() {
@@ -70,10 +72,13 @@ public class stepsMyAccount extends BaseMethods {
 		MyAccountPage.checkNavLinkText(8,data.get(7).get("link"));
 	}
 	
+	//Selecting any link in the side menu
 	@Given("I select the link {string}")
 	public void i_select_the_link(String string) {
 	    MyAccountPage.clickNavLink(string);
 	}
+	
+	/* Steps for the orders section */
 	
 	@Then("I should see in the orders section <item>")
 	public void i_should_see_in_the_orders_section_item(DataTable dataTable) {
@@ -82,6 +87,8 @@ public class stepsMyAccount extends BaseMethods {
 		MyAccountPage.OrdersCheckText(data.get(0).get("text"));
 	}
 	
+	/* Steps for the downloads section */
+	
 	@Then("I should see in the downloads section <item>")
 	public void i_should_see_in_the_downloads_section_item(DataTable dataTable) {
 		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
@@ -89,12 +96,15 @@ public class stepsMyAccount extends BaseMethods {
 		MyAccountPage.DownloadsCheckText(data.get(0).get("text"));
 	}
 	
+	/* Steps for the coupons section */
+	
 	@Then("I should see in the coupons section <item>")
 	public void i_should_see_in_the_coupons_section_item(DataTable dataTable) {
 		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
 		MyAccountPage.CopuonsCheckText(data.get(0).get("text"));
 	}
 	
+	/* Steps for the address section */
 	
 	@Then("I should see in the address book section <item>")
 	public void i_should_see_in_the_address_book_section_item(DataTable dataTable) {
@@ -104,6 +114,8 @@ public class stepsMyAccount extends BaseMethods {
 		MyAccountPage.AddressSectionCheckButton(2,data.get(0).get("button2"));
 	}
 
+	/* Steps for the payments section */
+	
 	@Then("I should see in the payments page section <item>")
 	public void i_should_see_in_the_payments_page_section_item(io.cucumber.datatable.DataTable dataTable) {
 		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
@@ -111,6 +123,8 @@ public class stepsMyAccount extends BaseMethods {
 		MyAccountPage.PaymentsSectionCheckButton(1,data.get(0).get("button"));
 	}
 
+	/* Steps for the account section */
+	
 	@Then("I should see fields with labels in the Account details section <item>")
 	public void i_should_see_fields_with_labels_in_the_account_details_section_item(io.cucumber.datatable.DataTable dataTable) {
 		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
@@ -133,6 +147,42 @@ public class stepsMyAccount extends BaseMethods {
 	public void i_should_be_in_the_login_page() {
 	    LoginPage.CheckUrl();
 	}
+
+
+	/* steps for MyAccountChangePwd.feature - User changes password, confirms changes, Logs in with new credentials,
+	 * then changes the credentials back again
+	 */
+
+	@Then("I enter my current password {string}")
+	public void i_enter_my_current_password(String string) {
+	   MyAccountPage.currentPassword(string);
+	}
+	
+	@Then("I enter my new password {string}")
+	public void i_enter_my_new_password(String string) {
+	   MyAccountPage.newPassword(string);
+	}
+	@Then("I confirm my new password {string}")
+	public void i_confirm_my_new_password(String string) {
+	    MyAccountPage.confirmPassword(string);
+	}
+	@When("I click the save changes button")
+	public void i_click_the_save_changes_button() {
+	    MyAccountPage.saveChanges();
+	}
+	@Then("I should see the message <item>")
+	public void i_should_see_the_message_item(io.cucumber.datatable.DataTable dataTable) {
+		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
+		MyAccountPage.AccountChangesSavedCheckText(data.get(0).get("message"));
+	}
+
+	
+	@Given("I enter my new display name {string}")
+	public void i_enter_my_new_display_name(String string) {
+	   MyAccountPage.newDisplayName(string);
+	}
+
+
 
 
 

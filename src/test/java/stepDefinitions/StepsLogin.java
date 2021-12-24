@@ -24,7 +24,7 @@ public class StepsLogin extends BaseMethods {
 	}
 	
 	@Given("I open the website and go to sign in")
-	public void i_open_the_website_and_go_to_sign_in() {
+	public void i_open_the_website_and_go_to_sign_in() throws InterruptedException {
 		navigateToHomePage();
 		HomePage.acceptCookies();
 		HomePage.selectLoginLink();

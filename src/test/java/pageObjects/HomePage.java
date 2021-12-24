@@ -15,8 +15,9 @@ public class HomePage extends BaseMethods {
 		
 	}
 
-	public static void acceptCookies() {
+	public static void acceptCookies() throws InterruptedException {
 		WaitForElementToBePresent(By.id("cookiescript_accept"));
+		Thread.sleep(2000);
 		Click(By.id("cookiescript_accept"));
 
 	}
