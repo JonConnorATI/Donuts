@@ -104,6 +104,42 @@ public class stepsMyAccount extends BaseMethods {
 		MyAccountPage.AddressSectionCheckButton(2,data.get(0).get("button2"));
 	}
 
+	@Then("I should see in the payments page section <item>")
+	public void i_should_see_in_the_payments_page_section_item(io.cucumber.datatable.DataTable dataTable) {
+		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
+		MyAccountPage.PaymentsSectionCheckText(data.get(0).get("text"));
+		MyAccountPage.PaymentsSectionCheckButton(1,data.get(0).get("button"));
+	}
+
+	@Then("I should see fields with labels in the Account details section <item>")
+	public void i_should_see_fields_with_labels_in_the_account_details_section_item(io.cucumber.datatable.DataTable dataTable) {
+		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
+		MyAccountPage.AccountSectionCheckLabel(1,data.get(0).get("label"));
+		MyAccountPage.AccountSectionCheckLabel(2,data.get(1).get("label"));
+		MyAccountPage.AccountSectionCheckLabel(3,data.get(2).get("label"));
+		MyAccountPage.AccountSectionCheckLabel(4,data.get(3).get("label"));
+		MyAccountPage.AccountSectionCheckLabel(5,data.get(4).get("label"));
+		MyAccountPage.AccountSectionCheckLabel(6,data.get(5).get("label"));
+		MyAccountPage.AccountSectionCheckLabel(7,data.get(6).get("label"));
+	}
+	@Then("I should see some advisory text and a button in the Acount details section <item>")
+	public void i_should_see_some_advisory_text_and_a_button_in_the_acount_details_section_item(io.cucumber.datatable.DataTable dataTable) {
+		List<Map<String,String>> data = dataTable.asMaps(String.class,String.class);
+		MyAccountPage.AccountSectionCheckText(data.get(0).get("text"));
+		MyAccountPage.AccountSectionCheckButton(1,data.get(0).get("button"));
+	}
+
+	@Then("I should be in the login page")
+	public void i_should_be_in_the_login_page() {
+	    LoginPage.CheckUrl();
+	}
+
+
+
+
+
+
+
 
 
 	

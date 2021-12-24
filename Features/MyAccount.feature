@@ -42,7 +42,7 @@ Orders page contains - A Button with Go shop text that makes up a message about 
 
 Given I select the link "Orders"
 Then I should see in the orders section <item>
-|button|text| 
+|button	|text								| 
 |Go shop|Go shop No order has been made yet.| 
 
 
@@ -51,7 +51,7 @@ Downloads contains - A Button with Go shop text that makes up a message about do
 
 Given I select the link "Downloads"
 Then I should see in the downloads section <item>
-|button|text| 
+|button	|text								| 
 |Go shop|Go shop No downloads available yet.|
 
 
@@ -59,19 +59,47 @@ Scenario: Open Coupons link
 Coupons contains - A message about coupons
 Given I select the link "Coupons"
 Then I should see in the coupons section <item>
-|text|
-|List of coupons which are valid & available for use. Click on the coupon to use it. The coupon discount will be visible only when at least one product is present in the cart.|
+|text																																											|
+|List of coupons which are valid & available for use. Click on the coupon to use it. The coupon discount will be visible only when at least one product is present in the cart.	|
 
 
-@Test1
+
 Scenario: Open Address Book link 
 Address Book contains - Message about addresses, and buttons for Add Billing, Add Shipping Addresses
 Given I select the link "Address Book"
 Then I should see in the address book section <item>
-|text|button1|button2|
-|The following addresses will be used on the checkout page by default.|ADD BILLING ADDRESS|ADD SHIPPING ADDRESS|
+|text																	|button1			|button2|
+|The following addresses will be used on the checkout page by default.	|ADD BILLING ADDRESS|ADD SHIPPING ADDRESS|
 
 
 
+Scenario: Open Payment Methods link
+Payment Methods contains - Message about pay methods, and a button for Add Payment method
+Given I select the link "Payment methods"
+Then I should see in the payments page section <item>
+|text					|button				|
+|No saved methods found.|ADD PAYMENT METHOD	|
 
+
+Scenario: Open Account Details link
+Account Details contains - Name Fields, email field, password fields and a button for save changes
+Given I select the link "Account details"
+Then I should see fields with labels in the Account details section <item>
+|label												|
+|First name *										|
+|Last name *										|
+|Display name *										|
+|Email address *									|
+|Current password (leave blank to leave unchanged)	|
+|New password (leave blank to leave unchanged)		|
+|Confirm new password								|
+And I should see some advisory text and a button in the Acount details section <item>
+|text																				|button			|
+|This will be how your name will be displayed in the account section and in reviews	|Save changes	|
+
+
+Scenario: Log out
+If I select Log out I should go back to the login page
+When I select the link "Logout"
+Then I should be in the login page
 

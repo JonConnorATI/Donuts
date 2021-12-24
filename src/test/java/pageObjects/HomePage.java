@@ -1,5 +1,7 @@
 package pageObjects;
 
+import static org.junit.Assert.assertEquals;
+
 import org.openqa.selenium.By;
 import baseMethods.BaseMethods;
 
@@ -17,6 +19,12 @@ public class HomePage extends BaseMethods {
 		WaitForElementToBePresent(By.id("cookiescript_accept"));
 		Click(By.id("cookiescript_accept"));
 
+	}
+
+	public static void CheckUrl() {
+		String URL = "https://offbeatdonuts.com/";
+		String Actual = driver.getCurrentUrl();
+		assertEquals(Actual, URL);
 	}
 
 	

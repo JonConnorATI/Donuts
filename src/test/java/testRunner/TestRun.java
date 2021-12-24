@@ -14,8 +14,8 @@ import io.cucumber.junit.CucumberOptions;
 				dryRun=false,
 				monochrome=true,
 				plugin= {"pretty","html:test-output"},
-				publish = false,
-				tags = "@Test1"
+				publish = true,
+				tags = ""
 				
 				)
 

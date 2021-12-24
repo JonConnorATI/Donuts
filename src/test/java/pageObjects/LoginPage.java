@@ -33,6 +33,13 @@ public class LoginPage extends BaseMethods{
 		
 		}
 
+	public static void CheckUrl() {
+		String URL = "https://offbeatdonuts.com/my-account/";
+		String Actual = driver.getCurrentUrl();
+		assertEquals(Actual, URL);
+		
+	}
+
 	/*
 	 * public static void checkLoginErrorMessage(String message) {
 	 * System.out.println("We are in the lostpassword section");
