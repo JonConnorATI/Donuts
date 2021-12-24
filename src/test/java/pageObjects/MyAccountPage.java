@@ -11,12 +11,8 @@ import baseMethods.BaseMethods;
 
 public class MyAccountPage extends BaseMethods {
 
-	public static void hoverOnLink() {
-		hoverOverElement(By.xpath("//a[@title='Our Story']"));
-	}
-	
-		
 	public static void currentPassword(String string) {
+		clearText(By.xpath("//input[@name='password_current']"));
 		enterText(By.xpath("//input[@name='password_current']"),string);
 		
 	}
@@ -36,6 +32,7 @@ public class MyAccountPage extends BaseMethods {
 	}
 
 	public static void newDisplayName(String string) {
+		clearText(By.xpath("//input[@name='account_display_name']"));
 		enterText(By.xpath("//input[@name='account_display_name']"),string);
 		
 	}
@@ -141,6 +138,12 @@ public class MyAccountPage extends BaseMethods {
 	public static void AccountSectionCheckButton(int i, String string) {
 		// .btn.btn-outline-primary:nth-of-type(1)
 		WebElement Actual = driver.findElement(By.cssSelector(".btn.btn-outline-primary:nth-of-type(" + i + ")"));
+		assertEquals(Actual.getText(), (string));
+	}
+
+	public static void AccountChangesSavedCheckText(String string) {
+		WaitForElementToBePresent(By.cssSelector(".woocommerce-message"));
+		WebElement Actual = driver.findElement(By.cssSelector(".woocommerce-message"));
 		assertEquals(Actual.getText(), (string));
 	}
 	

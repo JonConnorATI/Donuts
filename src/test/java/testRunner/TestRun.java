@@ -9,7 +9,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions
 				(
 						
-				features=".//Features/MyAccount.feature",
+				features=".//Features/MyAccountChangePwd.feature",
 				glue="stepDefinitions",
 				dryRun=false,
 				monochrome=true,

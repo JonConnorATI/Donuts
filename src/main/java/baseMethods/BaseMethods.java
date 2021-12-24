@@ -18,7 +18,7 @@ public class BaseMethods {
 
 	public static void setDriver() {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\JonCo\\OneDrive\\Desktop\\GIT\\offBeatDonuts\\Drivers\\chromedriver.exe");
+				"C:\\Users\\JonCo\\git\\offBeatDonuts\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 
 	}
