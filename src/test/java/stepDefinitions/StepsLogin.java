@@ -1,19 +1,12 @@
 package stepDefinitions;
 
 import java.io.IOException;
-
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import baseMethods.BaseMethods;
 import io.cucumber.java.*;
 import io.cucumber.java.en.*;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
-import pageObjects.MyAccountPage;
+
 
 
 public class StepsLogin extends BaseMethods {
