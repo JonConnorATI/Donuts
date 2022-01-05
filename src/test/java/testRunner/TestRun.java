@@ -11,9 +11,9 @@ import io.cucumber.junit.CucumberOptions;
 						
 				features=".//Features/MyAccountChangePwd.feature",
 				glue="stepDefinitions",
-				dryRun=false,
+				dryRun=true,
 				monochrome=true,
-				plugin= {"pretty","html:test-output"},
+				plugin= {"pretty","html:test-output","html:target/cucumber-reports"},
 				publish = true,
 				tags = ""
 				
