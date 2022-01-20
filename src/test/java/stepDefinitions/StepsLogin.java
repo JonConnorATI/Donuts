@@ -6,6 +6,7 @@ import io.cucumber.java.*;
 import io.cucumber.java.en.*;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
+import pageObjects.MyAccountPage;
 
 
 
