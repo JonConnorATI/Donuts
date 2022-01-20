@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import baseMethods.BaseMethods;
 import static org.junit.Assert.*;
 
-public class LoginPage extends BaseMethods{
+public class LoginPage extends BaseMethods {
 
 	public static void enterUsername(String username) {
 		enterText(By.id("username"), username);

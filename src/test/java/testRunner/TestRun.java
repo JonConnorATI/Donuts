@@ -9,11 +9,11 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions
 				(
 						
-				features=".//Features/MyAccountChangePwd.feature",
+				features=".//Features/Login.feature",
 				glue="stepDefinitions",
-				dryRun=true,
+				dryRun=false,
 				monochrome=true,
-				plugin= {"pretty","html:test-output","html:target/cucumber-reports"},
+				plugin= {"pretty","html:target/cucumber-reports"},
 				publish = true,
 				tags = ""
 				
