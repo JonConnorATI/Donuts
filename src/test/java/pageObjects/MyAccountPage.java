@@ -146,6 +146,11 @@ public class MyAccountPage extends BaseMethods {
 		WebElement Actual = driver.findElement(By.cssSelector(".woocommerce-message"));
 		assertEquals(Actual.getText(), (string));
 	}
+
+	public static void checkTitle(String string) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }
