@@ -56,6 +56,7 @@ public class StepsLogin extends BaseMethods {
 			LoginPage.checkLoginErrorMessage();
 
 		} else {
+			System.out.println("In the else section");
 			LoginPage.checkTitle("My account - Offbeat Donuts");
 
 		}
