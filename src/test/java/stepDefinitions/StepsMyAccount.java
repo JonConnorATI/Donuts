@@ -9,7 +9,7 @@ import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
 
-public class stepsMyAccount extends BaseMethods {    
+public class StepsMyAccount extends BaseMethods {    
 	
 	
 	@Given("I login with valid account details")
