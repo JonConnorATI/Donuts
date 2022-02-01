@@ -24,9 +24,17 @@ public class StepsLogin extends BaseMethods {
 		closeDriver();
 	}
 	
-	@Given("I open the website and go to sign in")
-	public void i_open_the_website_and_go_to_sign_in() throws InterruptedException {
+	@Given("I open the website")
+	public void i_open_the_website()  {
 		navigateToHomePage();
+		waitForPageLoaded(driver);
+		HomePage.acceptCookies();
+	}
+	
+	@Given("I open the website and go to sign in")
+	public void i_open_the_website_and_go_to_sign_in() {
+		navigateToHomePage();
+		waitForPageLoaded(driver);
 		HomePage.acceptCookies();
 		HomePage.selectLoginLink();
 	}
@@ -62,6 +70,8 @@ public class StepsLogin extends BaseMethods {
 		}
 
 	}
+	
+	
 
 }
 
