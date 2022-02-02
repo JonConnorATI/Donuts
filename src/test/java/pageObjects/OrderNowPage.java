@@ -83,9 +83,9 @@ public class OrderNowPage extends BaseMethods {
 
 	}
 
-	public static void CheckButtonNumber(String string) {
+	public static void CheckButtonNumber(String string, String string2) {
 		checkForPresenceOfText(
-				By.xpath("//h3[text() ='Classic Glazed Dozen']//following-sibling::div[@class='qty']/span"), string);
+				By.xpath("//h3[text() ='" + string2 + "']//following-sibling::div[@class='qty']/span"), string);
 
 	}
 
@@ -126,5 +126,48 @@ public class OrderNowPage extends BaseMethods {
 	public static void checkTextInPopUp2(String string) {
 		checkForPresenceOfText(By.cssSelector(".start_new"), string);
 	}
+
+	public static void getOffbeatDozen() {
+		WebElement Element = driver.findElement(By.xpath("//a[@data-tab='offbeat-dozen']"));
+		Element.isEnabled();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", Element);
+		Click(By.xpath("//h3[text() ='Offbeat Dozen']//following-sibling::div[@class='btn select']"));
+		
+		
+	}
+
+	public static void pickDonuts(Integer int1)  {
+		int count = 0;
+		int index = 1;
+		
+		while (count < int1) {
+			Click(By.xpath("(//*[@id='donuts']//*[@class='btn select'])[" + index + "]"));
+			count = count + 1;
+			index = index + 1;
+			
+		}
+			
+	}
+
+	public static void addCandles() {
+		WebElement Element = driver.findElement(By.cssSelector("div[data-section='three']"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", Element);
+		
+		WebElement candleCheckBox = driver.findElement(By.xpath("(//h4[text() ='Add Candles'])[1]"));
+		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(candleCheckBox));
+		candleCheckBox.click();
+		
+		
+	}
+
+	public static void addMessage(String string) {
+		Click(By.xpath("(//h4[text() ='Add Message To A Donut:'])[1]"));
+		enterText(By.cssSelector("div[class='selected'] input[placeholder='3 words maximum']"), string);
+		
+	}
+	
+	
 
 }

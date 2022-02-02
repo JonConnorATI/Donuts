@@ -11,10 +11,11 @@ Then I should be in the order now page and see <text>
 |text							|
 |ORDER DONUTS in just 4 steps:	|
 
+
 Scenario: Economy, order a glazed dozen with no extras, add to my cart and check whats been added
 
 When I select Class Glazed Dozen
-Then I should see the button change to the number one
+Then I should see the "Classic Glazed Dozen" button change to the number one
 When I select Next steps
 Then I should see these <items> in the Boxes summary 
 |items					|
@@ -30,11 +31,44 @@ Then I should see a pop up with these <items>
 |VIEW CART					|
 |Start another box			|
 When I select View Cart
-Then I should see the <items> I have chosen
+Then for this economy scenario I should see the <items> I have chosen
 |items						|
 |my cart (1 items)			|
 |Classic Glazed Dozen		|
 |Remove|
 
 
- 
+Scenario: Hungry, order an offBeat dozen with no extras, 12 different varieties, add candles, add a message, add to my cart and check whats been added
+
+When I select Offbeat Dozen
+Then I should see the "Offbeat Dozen" button change to the number one
+When I select Next steps
+Then I should see these <items> in the Boxes summary 
+|items					|
+|Boxes:					|
+|+						|
+|Offbeat Dozen			|
+|Box status: 0 / 12		|
+|Remove box				|
+Given I select 12 different donuts
+And add candles
+And a message "just for you"
+When I select Add to cart
+Then I should see a pop up with these <items>
+|items						|
+|Your box was added to cart	|
+|VIEW CART					|
+|Start another box			|
+When I select View Cart
+Then for this hungry scenario I should see the <items> I have chosen
+|items						|
+|my cart (3 items)			|
+|Offbeat Dozen				|
+|Remove						|
+|Candles					|
+|Remove						|
+|Piped name					|
+|"just for you"	|
+|Remove						|
+
+

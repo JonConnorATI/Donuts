@@ -1,7 +1,6 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.*;
 import pageObjects.OrderNowPage;
 import pageObjects.ShoppingCartPage;
 
@@ -29,9 +28,9 @@ public class StepsOrderNow {
 		OrderNowPage.getGlazedDozen();
 	}
 
-	@Then("I should see the button change to the number one")
-	public void i_should_see_the_button_change_to_the_number_one() {
-		OrderNowPage.CheckButtonNumber("1");
+	@Then("I should see the {string} button change to the number one")
+	public void i_should_see_the_button_change_to_the_number_one(String string) {
+		OrderNowPage.CheckButtonNumber("1", string);
 	}
 
 	@When("I select Next steps")
@@ -69,17 +68,47 @@ public class StepsOrderNow {
 	public void i_select_view_cart() {
 		OrderNowPage.selectViewCart();
 	}
-	
-	
-	@Then("I should see the <items> I have chosen")
-	public void i_should_see_the_items_i_have_chosen(io.cucumber.datatable.DataTable dataTable) {
+
+	@Then("for this economy scenario I should see the <items> I have chosen")
+	public void for_this_economy_scenario_i_should_see_the_items_i_have_chosen(DataTable dataTable) {
 		List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
-		ShoppingCartPage.CheckTextField0(data.get(0).get("items"));
-		ShoppingCartPage.CheckTextField1(data.get(1).get("items"));
-		ShoppingCartPage.CheckTextField2(data.get(2).get("items"));
+		ShoppingCartPage.CheckEconomyCartTextField0(data.get(0).get("items"));
+		ShoppingCartPage.CheckEconomyCartTextField1(data.get(1).get("items"));
+		ShoppingCartPage.CheckEconomyCartTextField2(data.get(2).get("items"));
 	}
 
+	@When("I select Offbeat Dozen")
+	public void i_select_offbeat_dozen() {
+		OrderNowPage.getOffbeatDozen();
+	}
 
+	@Given("I select {int} different donuts")
+	public void i_select_different_donuts(Integer int1) {
+		OrderNowPage.pickDonuts(int1);
+	}
 
+	@And("add candles")
+	public void add_candles() {
+		OrderNowPage.addCandles();
+	}
+
+	@Given("a message {string}")
+	public void a_message(String string) {
+		OrderNowPage.addMessage(string);
+	}
+
+	@Then("for this hungry scenario I should see the <items> I have chosen")
+	public void for_this_hungry_scenario_i_should_see_the_items_i_have_chosen(DataTable dataTable) {
+		List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
+		ShoppingCartPage.CheckHungryCartTextField0(data.get(0).get("items"));
+		ShoppingCartPage.CheckHungryCartTextField1(data.get(1).get("items"));
+		ShoppingCartPage.CheckHungryCartTextField2(data.get(2).get("items"));
+		ShoppingCartPage.CheckHungryCartTextField3(data.get(3).get("items"));
+		ShoppingCartPage.CheckHungryCartTextField4(data.get(4).get("items"));
+		ShoppingCartPage.CheckHungryCartTextField5(data.get(5).get("items"));
+		ShoppingCartPage.CheckHungryCartTextField6(data.get(6).get("items"));
+		ShoppingCartPage.CheckHungryCartTextField7(data.get(7).get("items"));
+
+	}
 
 }
