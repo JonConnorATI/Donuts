@@ -8,7 +8,7 @@ Background:
 Given I open the website 
 When I select the Order Now link 
 Then I should be in the order now page and see <text>
-|text							|
+|text														|
 |ORDER DONUTS in just 4 steps:	|
 
 
@@ -18,21 +18,21 @@ When I select Class Glazed Dozen
 Then I should see the "Classic Glazed Dozen" button change to the number one
 When I select Next steps
 Then I should see these <items> in the Boxes summary 
-|items					|
-|Boxes:					|
-|+						|
+|items								|
+|Boxes:								|
+|+										|
 |Classic Glazed Dozen	|
 |Box status: 12 / 12	|
-|Remove box				|
+|Remove box						|
 When I select Add to cart
 Then I should see a pop up with these <items>
-|items						|
+|items											|
 |Your box was added to cart	|
-|VIEW CART					|
-|Start another box			|
+|VIEW CART									|
+|Start another box					|
 When I select View Cart
 Then for this economy scenario I should see the <items> I have chosen
-|items						|
+|items									|
 |my cart (1 items)			|
 |Classic Glazed Dozen		|
 |Remove|
@@ -44,31 +44,31 @@ When I select Offbeat Dozen
 Then I should see the "Offbeat Dozen" button change to the number one
 When I select Next steps
 Then I should see these <items> in the Boxes summary 
-|items					|
-|Boxes:					|
-|+						|
-|Offbeat Dozen			|
+|items								|
+|Boxes:								|
+|+										|
+|Offbeat Dozen				|
 |Box status: 0 / 12		|
-|Remove box				|
+|Remove box						|
 Given I select 12 different donuts
 And add candles
 And a message "just for you"
 When I select Add to cart
 Then I should see a pop up with these <items>
-|items						|
+|items											|
 |Your box was added to cart	|
-|VIEW CART					|
-|Start another box			|
+|VIEW CART									|
+|Start another box					|
 When I select View Cart
 Then for this hungry scenario I should see the <items> I have chosen
-|items						|
-|my cart (3 items)			|
-|Offbeat Dozen				|
-|Remove						|
-|Candles					|
-|Remove						|
+|items							|
+|my cart (3 items)	|
+|Offbeat Dozen			|
+|Remove							|
+|Candles						|
+|Remove							|
 |Piped name					|
-|"just for you"	|
-|Remove						|
+|"just for you"			|
+|Remove							|
 
 
