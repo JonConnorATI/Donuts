@@ -141,6 +141,8 @@ public class OrderNowPage extends BaseMethods {
 		int count = 0;
 		int index = 1;
 		
+		Click(By.linkText("Clear Selection"));
+		
 		while (count < int1) {
 			Click(By.xpath("(//*[@id='donuts']//*[@class='btn select'])[" + index + "]"));
 			count = count + 1;
@@ -167,6 +169,59 @@ public class OrderNowPage extends BaseMethods {
 		enterText(By.cssSelector("div[class='selected'] input[placeholder='3 words maximum']"), string);
 		
 	}
+
+	public static void getBirthdayDoubleDozen() {
+		WebElement Element = driver.findElement(By.xpath("//a[@data-tab='offbeat-dozen']"));
+		Element.isEnabled();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", Element);
+
+		//while (isElementPresent(By.xpath("//h3[text() ='Birthday Double Dozen']//following-sibling::div[@class='btn select']")) == false) {
+			Click(By.xpath("//*[@class='swiper-button-next next_offbeat-dozen']"));
+		
+		
+		Click(By.xpath("//h3[text() ='Birthday Double Dozen']//following-sibling::div[@class='btn select']"));
+		
+	}
+
+	public static void addCard() {
+		Click(By.xpath("(//h4[text() ='Add A Card:'])[1]"));
+		
+	}
+
+	public static void addOccasion() {
+		Click(By.xpath("(//label[contains(text(),'Happy Birthday')])[1]"));
+		
+	}
+
+	public static void addGreeting(String string) {
+		enterText(By.xpath("(//div[@class='customise']//textarea)[1]"), string);
+		
+	}
+
+	public static void addBow(String string) {
+		Click(By.xpath("(//h4[text() ='Add A Bow:'])[1]"));
+		Click(By.xpath("(//label[contains(text(),'Pink')])[1]"));
+				
+	}
+
+	public static void addPhoto() {
+		Click(By.xpath("(//h4[text() ='Add 30 Personalised Sugar Discs:'])[1]"));
+		uploadFile(By.xpath("(//input[@type='file'])[1]"),"C:\\Users\\JonCo\\git\\Donuts\\Resources\\cucumber.jpg");
+		
+	}
+
+	public static void autoFillBox() {
+		Click(By.xpath("(//a[@class='box_autofill'])[1]"));
+		
+	}
+
+	
+	
+	
+	
+
+
 	
 	
 
