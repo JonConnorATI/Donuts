@@ -132,5 +132,34 @@ public class BaseMethods {
 		Assert.assertEquals(string, Actual);
 		
 	}
+	
+	//method to find an element and confirm some of the text in the element is what was expected
+	public static void checkForPresenceOfSomeText(By locator, String string) {
+		WaitForElementToBePresent(locator);
+		WebElement element = driver.findElement((locator));
+		String Actual = element.getText();
+		
+		//now check that the full text found contains the partial text that was expected
+		boolean isFound = Actual.contains(string);
+		System.out.println("Expected is: " + string + " is a substring of " + Actual + " - Actual is: " + isFound);
+		Assert.assertEquals(isFound, true);
+	}
+	
+	//Method to upload a file
+	public static void uploadFile(By locator, String filePath) {
+		/*
+		 * WebElement uploadElement = driver.findElement(locator);
+		 * uploadElement.click();
+		 * 
+		 * // enter the file path onto the file-selection input field
+		 * uploadElement.sendKeys(filePath);
+		 */
+        
+        WebElement element = driver.findElement(locator);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        // Setting value for "style" attribute to make textbox visible
+        js.executeScript("arguments[0].style.display='block';", element);
+        driver.findElement(locator).sendKeys(filePath);
+	}
 
 }
