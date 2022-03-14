@@ -74,6 +74,15 @@ public class BaseMethods {
 		}
 
 	}
+	
+	//Checks an element is dispalyed
+		public static boolean isElementDisplayed(By locator) {
+			if (driver.findElement(locator).isDisplayed()) {
+				return true;
+			} else {
+				return false;
+			}
+		}
 
 	//Check if an element is enabled
 	public static boolean isElemententEnabled(By locator) {
