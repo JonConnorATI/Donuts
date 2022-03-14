@@ -11,7 +11,7 @@ import io.cucumber.datatable.*;
 
 public class StepsOrderNow {
 
-	@When("I select the Order Now link")
+	@When("I select the Order Now link") 
 	public void i_select_the_order_now_link() {
 		OrderNowPage.selectOrderNow();
 
@@ -23,10 +23,10 @@ public class StepsOrderNow {
 		OrderNowPage.checkTextIsPresent(data.get(0).get("text"));
 	}
 
-	@When("I select Class Glazed Dozen")
-	public void i_select_class_glazed_dozen() {
-		OrderNowPage.getGlazedDozen();
-	}
+	/*
+	 * @When("I select Class Glazed Dozen") public void
+	 * i_select_class_glazed_dozen() { OrderNowPage.getGlazedDozen(); }
+	 */ 
 
 	@Then("I should see the {string} button change to the number one")
 	public void i_should_see_the_button_change_to_the_number_one(String string) {
@@ -77,11 +77,12 @@ public class StepsOrderNow {
 		ShoppingCartPage.CheckEconomyCartTextField2(data.get(2).get("items"));
 	}
 
-	@When("I select Offbeat Dozen")
-	public void i_select_offbeat_dozen() {
-		OrderNowPage.getOffbeatDozen();
-	}
-
+	/*
+	 * @When("I select Offbeat Dozen") public void i_select_offbeat_dozen() {
+	 * OrderNowPage.getOffbeatDozen(); }
+	 */
+	
+	
 	@Given("I select {int} different donuts")
 	public void i_select_different_donuts(Integer int1) {
 		OrderNowPage.pickDonuts(int1);
@@ -111,10 +112,10 @@ public class StepsOrderNow {
 
 	}
 	
-	@When("I select Birthday Double Dozen")
-	public void i_select_birthday_double_dozen() {
-		OrderNowPage.getBirthdayDoubleDozen();
-	}
+	/*
+	 * @When("I select Birthday Double Dozen") public void
+	 * i_select_birthday_double_dozen() { OrderNowPage.getBirthdayDoubleDozen(); }
+	 */
 	
 	@Given("add a card")
 	public void add_a_card() {
@@ -174,6 +175,14 @@ public class StepsOrderNow {
 	public void i_select_auto_fill_this_box() {
 	    OrderNowPage.autoFillBox();
 	}
+
+	
+	@When("I select the donuts {string} from the Offbeat Dozen variety")
+	public void i_select_the_donuts_from_the_offbeat_dozen_variety(String string) throws InterruptedException {
+	    OrderNowPage.pickFromOffBeatDozen(string);
+	}
+
+
 
 
 

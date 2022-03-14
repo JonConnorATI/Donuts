@@ -15,7 +15,7 @@ Then I should be in the order now page and see <text>
 
 Scenario: Economy, add to my cart and check whats been added
 
-When I select Class Glazed Dozen
+When I select the donuts "Classic Glazed Dozen" from the Offbeat Dozen variety
 Then I should see the "Classic Glazed Dozen" button change to the number one
 When I select Next steps
 Then I should see these <items> in the Boxes summary 
@@ -41,7 +41,7 @@ Then for this economy scenario I should see the <items> I have chosen
 
 Scenario: Hungry, add to my cart and check whats been added
 
-When I select Offbeat Dozen
+When I select the donuts "Offbeat Dozen" from the Offbeat Dozen variety 
 Then I should see the "Offbeat Dozen" button change to the number one
 When I select Next steps
 Then I should see these <items> in the Boxes summary 
@@ -75,7 +75,7 @@ Then for this hungry scenario I should see the <items> I have chosen
 
 Scenario: Luxury, add to my cart and check whats been added
 
-When I select Birthday Double Dozen
+When I select the donuts "Birthday Double Dozen" from the Offbeat Dozen variety 
 Then I should see the "Birthday Double Dozen" button change to the number one
 When I select Next steps
 Then I should see these <items> in the Boxes summary 
