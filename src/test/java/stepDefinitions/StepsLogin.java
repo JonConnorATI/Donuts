@@ -1,28 +1,16 @@
 package stepDefinitions;
 
-import java.io.IOException;
-import baseMethods.BaseMethods;
-import io.cucumber.java.*;
+import commonMethods.CommonMethods;
 import io.cucumber.java.en.*;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
-//import pageObjects.MyAccountPage;
 
 
 
-public class StepsLogin extends BaseMethods {
+
+public class StepsLogin extends CommonMethods {
 	
-	@Before()
-	public void setup() throws IOException {
-
-		setDriver();
-	}
-
-	@After()
-	public void tearDown() {
-
-		closeDriver();
-	}
+	
 	
 	@Given("I open the website")
 	public void i_open_the_website()  {

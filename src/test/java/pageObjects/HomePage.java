@@ -4,11 +4,12 @@ import static org.junit.Assert.assertEquals;
 
 import org.openqa.selenium.By;
 
-import baseMethods.BaseMethods;
+
+import commonMethods.CommonMethods;
 
 
 //This page is the first one the user lands in when they open the URL
-public class HomePage extends BaseMethods {
+public class HomePage extends CommonMethods {
 
 	public static LoginPage selectLoginLink() {
 		Click(By.linkText("Login"));

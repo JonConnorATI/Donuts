@@ -1,10 +1,9 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import commonMethods.CommonMethods;
 
-import baseMethods.BaseMethods;
-
-public class ShoppingCartPage extends BaseMethods {
+public class ShoppingCartPage extends CommonMethods {
 
 	public static void CheckEconomyCartTextField0(String string) {
 		checkForPresenceOfText(By.cssSelector(".entry-title"), string);

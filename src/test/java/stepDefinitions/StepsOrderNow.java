@@ -3,10 +3,8 @@ package stepDefinitions;
 import io.cucumber.java.en.*;
 import pageObjects.OrderNowPage;
 import pageObjects.ShoppingCartPage;
-
 import java.util.List;
 import java.util.Map;
-
 import io.cucumber.datatable.*;
 
 public class StepsOrderNow {

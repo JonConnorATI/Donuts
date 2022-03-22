@@ -3,13 +3,11 @@ package pageObjects;
 import static org.junit.Assert.assertEquals;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-
-
-import baseMethods.BaseMethods;
+import commonMethods.CommonMethods;
 
 //import cucumber.api.DataTable;
 
-public class MyAccountPage extends BaseMethods {
+public class MyAccountPage extends CommonMethods {
 
 	public static void currentPassword(String string) {
 		clearText(By.xpath("//input[@name='password_current']"));

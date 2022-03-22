@@ -8,10 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import commonMethods.CommonMethods;
 
-import baseMethods.BaseMethods;
-
-public class OrderNowPage extends BaseMethods {
+public class OrderNowPage extends CommonMethods {
 
 	//Selects the order now button
 	public static void selectOrderNow() {

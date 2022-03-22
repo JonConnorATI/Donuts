@@ -1,10 +1,10 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
-import baseMethods.BaseMethods;
+import commonMethods.CommonMethods;
 import static org.junit.Assert.*;
 
-public class LoginPage extends BaseMethods {
+public class LoginPage extends CommonMethods {
 
 	public static void enterUsername(String username) {
 		enterText(By.id("username"), username);
