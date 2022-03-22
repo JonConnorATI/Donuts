@@ -2,14 +2,14 @@ package stepDefinitions;
 
 import java.util.List;
 import java.util.Map;
-import baseMethods.BaseMethods;
+import commonMethods.CommonMethods;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import pageObjects.MyAccountPage;
 
-public class StepsMyAccount extends BaseMethods {    
+public class StepsMyAccount extends CommonMethods {    
 	
 	
 	@Given("I login with valid account details")
