@@ -82,7 +82,7 @@ public class BaseMethods {
 						driver = null;
 					}
 				} catch (Exception e) {
-					System.out.println("Method Failed: screenshotOnFailure, Exception: " + e.getMessage());
+					System.out.println("Method Failed: Exception: " + e.getMessage());
 				}
 			}
 

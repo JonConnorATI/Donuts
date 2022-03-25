@@ -235,7 +235,7 @@ public class OrderNowPage extends CommonMethods {
 	//adds a bow
 	public static void addBow(String string) {
 		Click(By.xpath("(//h4[text() ='Add A Bow:'])[1]"));
-		Click(By.xpath("(//label[contains(text(),'Pink')])[1]"));
+		Click(By.xpath("(//label[contains(text(),'" + string + "')])[1]"));
 				
 	}
 

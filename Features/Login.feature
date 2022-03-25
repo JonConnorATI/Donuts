@@ -12,8 +12,8 @@ When I press Login
 Then There should be <message> message displayed
 
 Examples:
-|username						| password 	|message		|
-|jondonuttest@sharklasers.com	|Cloggone	|An Error		|
+|username												| password 	|message		|
+|jondonuttest@sharklasers.com		|Cloggone		|An Error		|
 |jondonuttesttw@sharklasers.com	|Cloggtwo!	|An Error		|
 |jondonuttest@sharklasers.com 	|Cloggtwo!	|No Error		|
             
