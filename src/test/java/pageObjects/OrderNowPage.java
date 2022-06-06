@@ -188,7 +188,16 @@ public class OrderNowPage extends CommonMethods {
 
 	//adds message to a donut
 	public static void addMessage(String string) {
-		Click(By.xpath("(//h4[text() ='Add Message To A Donut:'])[1]"));
+		String xpath = "(//h4[text() ='Add Message To A Donut:'])[1]";
+		
+		WebElement Element = driver.findElement(By.xpath("(//h2[@class='title'])[3]"));
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", Element);
+		
+		WebElement addMsgCheckBox = driver.findElement(By.xpath(xpath));
+		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(addMsgCheckBox));
+		addMsgCheckBox.click();
+		
 		enterText(By.cssSelector("div[class='selected'] input[placeholder='3 words maximum']"), string);
 		
 	}
