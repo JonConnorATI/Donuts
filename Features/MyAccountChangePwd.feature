@@ -16,7 +16,8 @@ When I click the save changes button
 Then I should see the message <item>
 |message								|
 |Account details changed successfully.	|
-And I should see onscreen text with the sentances  <text1> and <text2>
+Given I select the link "Dashboard"
+Then I should see onscreen text with the sentances  <text1> and <text2>
 |text1											|text2																																					| 
 |Hello Jon Test 1 (not Jon Test 1? Log out)		|From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.	|
 
@@ -33,7 +34,8 @@ When I click the save changes button
 Then I should see the message <item>
 |message								|
 |Account details changed successfully.	| 
-And I should see onscreen text with the sentances  <text1> and <text2>
+Given I select the link "Dashboard"
+Then I should see onscreen text with the sentances  <text1> and <text2>
 |text1											|text2																																					|
 |Hello DisplayJon2 (not DisplayJon2? Log out)	|From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.	|
 
@@ -54,7 +56,8 @@ When I click the save changes button
 Then I should see the message <item>
 |message								|
 |Account details changed successfully.	|
-And I should see onscreen text with the sentances  <text1> and <text2>
+Given I select the link "Dashboard"
+Then I should see onscreen text with the sentances  <text1> and <text2>
 |text1											|text2																																					| 
 |Hello Jon Test 1 (not Jon Test 1? Log out)		|From your account dashboard you can view your recent orders, manage your shipping and billing addresses, and edit your password and account details.	|
 
