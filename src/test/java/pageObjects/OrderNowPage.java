@@ -54,7 +54,7 @@ public class OrderNowPage extends CommonMethods {
 	}
 
 	//Clicks the Add to cart button
-	public static void selectAddToCart() {
+	public static void selectAddToCart() throws InterruptedException {
 		String xpath = "(//*[contains(text(),'Add to Cart')])[1]";
 		String css = ".extras_wrap";
 		WebElement Element = driver.findElement(By.cssSelector(css));
@@ -63,6 +63,7 @@ public class OrderNowPage extends CommonMethods {
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 		WebElement button = driver.findElement(By.xpath(xpath));
 		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.elementToBeClickable(button));
+		Thread.sleep(3000);
 		button.click();
 		waitForPageLoaded(driver);
 
@@ -158,10 +159,11 @@ public class OrderNowPage extends CommonMethods {
 	 */
 
 	//Picks the donuts from the list available
-	public static void pickDonuts(Integer int1)  {
+	public static void pickDonuts(Integer int1) throws InterruptedException  {
 		int count = 0;
 		int index = 1;
 		
+		Thread.sleep(3000);
 		Click(By.linkText("Clear Selection"));
 		
 		while (count < int1) {

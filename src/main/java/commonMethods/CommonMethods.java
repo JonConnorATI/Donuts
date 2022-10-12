@@ -20,7 +20,7 @@ public class CommonMethods extends BaseMethods {
 		public static void Click(By locator) {
 			// new WebDriverWait(driver,
 			// 5).until(ExpectedConditions.elementToBeClickable(locator)).click();
-			new WebDriverWait(driver, Duration.ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(locator))
+			new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(locator))
 					.click();
 		}
 		

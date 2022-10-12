@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 //import cucumber.api.java.After;
 //import cucumber.api.java.Before;
 
@@ -29,8 +31,11 @@ public class BaseMethods {
 					// fire fox setup
 					case "firefox":
 						if (null == driver) {
-							System.setProperty("webdriver.gecko.driver",
-									"C:\\Users\\JonCo\\git\\Donuts\\Drivers\\geckodriver.exe");
+							/*
+							 * System.setProperty("webdriver.gecko.driver",
+							 * "C:\\Users\\JonCo\\git\\Donuts\\Drivers\\geckodriver.exe");
+							 */
+							WebDriverManager.firefoxdriver().setup();
 							driver = new FirefoxDriver();
 						}
 						break;
@@ -38,8 +43,11 @@ public class BaseMethods {
 					// chrome setup
 					case "chrome":
 						if (null == driver) {
-							System.setProperty("webdriver.chrome.driver",
-									"C:\\Users\\JonCo\\git\\Donuts\\Drivers\\chromedriver.exe");
+							/*
+							 * System.setProperty("webdriver.chrome.driver",
+							 * "C:\\Users\\JonCo\\git\\Donuts\\Drivers\\chromedriver.exe");
+							 */
+							WebDriverManager.chromedriver().setup();
 							driver = new ChromeDriver();
 						}
 						break;
@@ -48,8 +56,11 @@ public class BaseMethods {
 					case "edge":
 						if (null == driver) {
 
-							System.setProperty("webdriver.edge.driver",
-									"C:\\Users\\JonCo\\git\\Donuts\\Drivers\\msedgedriver.exe");
+							/*
+							 * System.setProperty("webdriver.edge.driver",
+							 * "C:\\Users\\JonCo\\git\\Donuts\\Drivers\\msedgedriver.exe");
+							 */
+							WebDriverManager.edgedriver().setup();
 							driver = new EdgeDriver();
 						}
 						break;
