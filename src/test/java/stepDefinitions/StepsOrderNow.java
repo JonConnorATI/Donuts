@@ -48,7 +48,7 @@ public class StepsOrderNow {
 	}
 
 	@When("I select Add to cart")
-	public void i_select_add_to_cart() {
+	public void i_select_add_to_cart() throws InterruptedException {
 		OrderNowPage.selectAddToCart();
 	}
 
@@ -82,7 +82,7 @@ public class StepsOrderNow {
 	
 	
 	@Given("I select {int} different donuts")
-	public void i_select_different_donuts(Integer int1) {
+	public void i_select_different_donuts(Integer int1) throws InterruptedException {
 		OrderNowPage.pickDonuts(int1);
 	}
 
