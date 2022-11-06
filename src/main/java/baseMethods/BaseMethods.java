@@ -3,6 +3,7 @@ package baseMethods;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -14,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseMethods {
 
 	// Write here what browser you want to test with
-			private static String browser = /* write chrome, edge or firefox here ---> */ "edge";
+			private static String browser = /* write chrome, edge or firefox here ---> */ "chrome";
 
 			// Declare the web driver
 			public static WebDriver driver;
@@ -47,8 +48,12 @@ public class BaseMethods {
 							 * System.setProperty("webdriver.chrome.driver",
 							 * "C:\\Users\\JonCo\\git\\Donuts\\Drivers\\chromedriver.exe");
 							 */
+							
+							
+							ChromeOptions ops = new ChromeOptions();
+							ops.setHeadless(true);
 							WebDriverManager.chromedriver().setup();
-							driver = new ChromeDriver();
+							driver = new ChromeDriver(ops);
 						}
 						break;
 

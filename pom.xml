@@ -32,8 +32,8 @@
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-devtools-v104</artifactId>
-      <version>4.4.0</version>
+      <artifactId>selenium-devtools-v107</artifactId>
+      <version>4.6.0</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
     <dependency>
