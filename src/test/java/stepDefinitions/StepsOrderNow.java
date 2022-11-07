@@ -160,9 +160,9 @@ public class StepsOrderNow {
 		ShoppingCartPage.CheckLuxuryCartTextField12(data.get(12).get("items"));
 		ShoppingCartPage.CheckLuxuryCartTextField13(data.get(13).get("items"));
 		ShoppingCartPage.CheckLuxuryCartTextField14(data.get(14).get("items"));
-		ShoppingCartPage.CheckLuxuryCartTextField15(data.get(15).get("items"));
-		ShoppingCartPage.CheckLuxuryCartTextField16(data.get(16).get("items"));
-		ShoppingCartPage.CheckLuxuryCartTextField17(data.get(17).get("items"));
+		//ShoppingCartPage.CheckLuxuryCartTextField15(data.get(15).get("items"));
+		//ShoppingCartPage.CheckLuxuryCartTextField16(data.get(16).get("items"));
+		//ShoppingCartPage.CheckLuxuryCartTextField17(data.get(17).get("items"));
 		
 		
 		
