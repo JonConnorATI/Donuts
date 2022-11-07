@@ -145,5 +145,14 @@ public class CommonMethods extends BaseMethods {
 	        js.executeScript("arguments[0].style.display='block';", element);
 	        driver.findElement(locator).sendKeys(filePath);
 		}
+		
+		//Javascript click
+		public static void JSClick(By locator) {
+			WebElement ele = driver.findElement(locator);
+			new WebDriverWait(driver, Duration.ofSeconds(20)).until(ExpectedConditions.elementToBeClickable(ele));
+			JavascriptExecutor executor = (JavascriptExecutor)driver;
+			executor.executeScript("arguments[0].click();", ele);
+			
+		}
 
 }

@@ -10,7 +10,7 @@ Given I open the website
 When I select the Order Now link 
 Then I should be in the order now page and see <text>
 |text														|
-|ORDER DONUTS in just 4 steps:	|
+|ORDER DONUTS IN JUST 4 STEPS-	|
 
 
 Scenario: Economy, add to my cart and check whats been added
@@ -92,7 +92,7 @@ And add a greeting "All the best on your special day"
 And add an occasion
 And add a "Pink" bow
 And a message "just for you"
-And add personalised photo
+#And add personalised photo
 When I select Add to cart
 Then I should see a pop up with these <items>
 |items											|
@@ -102,7 +102,7 @@ Then I should see a pop up with these <items>
 When I select View Cart
 Then for this luxury scenario I should see the <items> I have chosen
 |items																													|
-|my cart (6 items)																							|
+|my cart (5 items)																							|
 |Birthday Double Dozen																					|
 |Remove																													|
 |Candles																												|
@@ -117,8 +117,8 @@ Then for this luxury scenario I should see the <items> I have chosen
 |Piped name																											|
 |"just for you"																									|
 |Remove																													|
-|Personalised discs																							|
-|cucumber.jpg																										|
-|Remove																													|
+#|Personalised discs																							|
+#|cucumber.jpg																										|
+#|Remove																													|
 
 

@@ -38,6 +38,7 @@ public class OrderNowPage extends CommonMethods {
 
 	//Clicks the next steps button
 	public static void selectNextSteps(int i) {
+		WaitForElementToBePresent(By.xpath("(//div[@class='next_step'])[" + i + "]"));
 		Click(By.xpath("(//div[@class='next_step'])[" + i + "]"));
 
 	}

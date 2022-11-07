@@ -51,7 +51,18 @@ public class BaseMethods {
 							
 							
 							ChromeOptions ops = new ChromeOptions();
-							ops.setHeadless(true);
+							//ops.setHeadless(true);
+							ops.addArguments("--disable-notifications"); 
+							ops.addArguments("--headless");
+							ops.addArguments("--no-sandbox");
+							ops.addArguments("--disable-dev-shm-usage");
+							ops.addArguments("--window-size=1920,1080");
+							ops.addArguments("--disable-extensions");
+							ops.addArguments("--proxy-server='direct://'");
+							ops.addArguments("--proxy-bypass-list=*");
+							ops.addArguments("--disable-gpu");
+							ops.addArguments("--ignore-certificate-errors");
+							ops.addArguments("--start-maximized");
 							WebDriverManager.chromedriver().setup();
 							driver = new ChromeDriver(ops);
 						}
