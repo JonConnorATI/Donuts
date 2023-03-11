@@ -5,18 +5,18 @@ I chose this web site as it has some good features to practice on. Also, its a b
 
 If you don't know anything about java and selenium, by all means have a look in this repository, clone it and have a play around. If you would like some learning resources, this free course on Udemy is where I started | [Course Information](https://www.udemy.com/course/automateseleniumusingjava/).
 
-If you'd like to know more about Cucumber and Gherkin please check this | [web resource](https://jonconnorati.github.io/MyBDD_version1.github.io/) out that I created for my take on the subject. 
+If you'd like to know more about Cucumber and Gherkin please check this [web resource](https://jonconnorati.github.io/MyBDD_version1.github.io/) out that I created for my take on the subject. 
 
-There's also a project I created with the same tests but using TestNG rather than Cucumber. | [View](https://github.com/JonConnorATI/donutsPageObjectModel)
+There's also a project I created with the same tests but using TestNG rather than Cucumber. [View](https://github.com/JonConnorATI/donutsPageObjectModel)
   
 
 ## What is this repository for? ###
 Practicing UI automation 
 
 ## What you will need
-* Jdk 18 | [Download](https://adoptium.net/en-GB/temurin/releases/?version=18)
+* Jdk 18 [Download](https://adoptium.net/en-GB/temurin/releases/?version=18)
 
-* Maven latest version | [Download](https://maven.apache.org/download.cgi) - [How to install](https://maven.apache.org/install.html)
+* Maven latest version [Download](https://maven.apache.org/download.cgi) - [How to install](https://maven.apache.org/install.html)
 
 Once installed verify your version by running the following commands in your terminal:  
     
@@ -26,13 +26,13 @@ Once installed verify your version by running the following commands in your ter
 ## IDE
 You will need an editor to use the Framework. There are loads out there. My personal preference is Eclipse, but I know a lot of people prefer VS Code. Try them both and see what works best for you.
 
-* Eclipse | [Download](https://www.eclipse.org/downloads/packages/release/luna/sr2/eclipse-ide-java-developers)
+* Eclipse [Download](https://www.eclipse.org/downloads/packages/release/luna/sr2/eclipse-ide-java-developers)
 
-* VS Code | [Download](https://code.visualstudio.com/download)
+* VS Code [Download](https://code.visualstudio.com/download)
 
 ## How do I get set up? ###
 
-Clone the repository, to a folder in your machine | [Instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
+Clone the repository, to a folder in your machine [Instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
 		
 
 <ul>
@@ -108,7 +108,7 @@ So once the runner is set up to kick off a run:
 
 The runner works out what scenarios to run from the features, for each `Given`, `When`, `Then` step it finds the code to run in the `stepDefinition` files this is when Java and Selenium takes over and each step definition calls the appropriate `baseMethods`, `commonMethods` and `pageMethods` from `src/main/java` 
 
-The project is set to run 'headless' | [Information](https://smartbear.com/blog/selenium-tests-headless/) which means you wont see the browser window. If you want to run it in your browser window, simply comment out the `ops.addArguments("--headless");` line in the `BaseMethods.java` file like so,
+The project is set to run 'headless' [Information](https://smartbear.com/blog/selenium-tests-headless/) which means you wont see the browser window. If you want to run it in your browser window, simply comment out the `ops.addArguments("--headless");` line in the `BaseMethods.java` file like so,
 
 ![alt text](Resources/Headless.png)
 
