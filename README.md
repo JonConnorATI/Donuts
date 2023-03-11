@@ -1,7 +1,7 @@
 # offBeatDonuts
 This is a Cucumber test framework that I've created to show potential employers my knowledge and help anyone interested in UI Automation testing.
 
-I chose this web site as it has some good features to practice on. Also, its a bit temperamental when switching between pages so the tests have to be robust and able to handle behaviour that may or may not happen. Its all good practice.
+I chose this web site as it has some good features to practice on. Also, its a bit temperamental when switching between pages so the tests have to be robust and able to handle behaviour that may or may not happen. Its all good fun.
 
 If you don't know anything about java and selenium, by all means have a look in this repository, clone it and have a play around. If you would like some learning resources, this free course on Udemy is where I started [Course Information](https://www.udemy.com/course/automateseleniumusingjava/).
 
