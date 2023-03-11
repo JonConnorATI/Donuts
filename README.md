@@ -108,7 +108,7 @@ So once the runner is set up to kick off a run:
 
 The runner works out what scenarios to run from the features, for each `Given`, `When`, `Then` step it finds the code to run in the `stepDefinition` files this is when Java and Selenium takes over and each step definition calls the appropriate `baseMethods`, `commonMethods` and `pageMethods` from `src/main/java` 
 
-The project is set to run 'headless' [Information](https://smartbear.com/blog/selenium-tests-headless/) which means you wont see the browser window. If you want to run it in your browser window, simply comment out the `ops.addArguments("--headless");` line in the `BaseMethods.java` file like so,
+The project is set to run 'headless' [(More Information here)](https://smartbear.com/blog/selenium-tests-headless/) which means you wont see the browser window. If you want to run it in your browser window, simply comment out the `ops.addArguments("--headless");` line in the `BaseMethods.java` file like so,
 
 ![alt text](Resources/Headless.png)
 
