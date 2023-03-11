@@ -112,7 +112,7 @@ The project is set to run 'headless' | [Information](https://smartbear.com/blog/
 
 ![alt text](Resources/Headless.png)
 
-##What Next
+## What Next
 
 I hope this has been helpful and you've successfully installed and ran the tests. You can now point this framework at any website and automate tests by writing your own feature files, step definitions and page methods.
 
