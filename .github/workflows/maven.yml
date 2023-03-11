@@ -9,7 +9,7 @@
 name: Build
 on:
   schedule:
-    - cron: '00/15 * * * *'
+    - cron: '15 2/12 * * *'
 jobs:
   test_schedule:
     runs-on: ubuntu-latest
