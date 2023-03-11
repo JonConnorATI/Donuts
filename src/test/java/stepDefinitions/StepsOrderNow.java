@@ -2,8 +2,6 @@ package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import pageMethods.OrderNowPage;
-import pageMethods.ShoppingCartPage;
-
 import java.util.List;
 import java.util.Map;
 import io.cucumber.datatable.*;
