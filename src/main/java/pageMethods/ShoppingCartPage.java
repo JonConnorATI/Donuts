@@ -1,4 +1,4 @@
-package pageObjects;
+package pageMethods;
 
 import org.openqa.selenium.By;
 import commonMethods.CommonMethods;
