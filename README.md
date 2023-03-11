@@ -3,7 +3,7 @@ This is a Cucumber test framework that I've created to show potential employers 
 
 I chose this web site as it has some good features to practice on. Also, its a bit temperamental when switching between pages so the tests have to be robust and able to handle behaviour that may or may not happen. Its all good practice.
 
-If you don't know anything about java and selenium, by all means have a look in this repository, clone it and have a play around. If you would like some learning resources, this free course on Udemy is where I started | [Course Information](https://www.udemy.com/course/automateseleniumusingjava/).
+If you don't know anything about java and selenium, by all means have a look in this repository, clone it and have a play around. If you would like some learning resources, this free course on Udemy is where I started [Course Information](https://www.udemy.com/course/automateseleniumusingjava/).
 
 If you'd like to know more about Cucumber and Gherkin please check this [web resource](https://jonconnorati.github.io/MyBDD_version1.github.io/) out that I created for my take on the subject. 
 
