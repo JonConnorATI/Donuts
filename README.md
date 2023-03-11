@@ -39,12 +39,12 @@ Clone the repository, to a folder in your machine [Instructions](https://docs.gi
 	<li>For VS Code</li><br>
 		<ul>
 			<li>From VS Code open the Folder containing the framework</li><br>
-			<li>From the Extensions | <a href="(https://code.visualstudio.com/docs/editor/extension-marketplace#:~:text=You%20can%20browse%20and%20install,Ctrl%2BShift%2BX)." target="_blank">Help</a></li><br>
+			<li>From the Extensions | <a href="https://code.visualstudio.com/docs/editor/extension-marketplace#:~:text=You%20can%20browse%20and%20install,Ctrl%2BShift%2BX)." target="_blank">Help</a></li><br>
 				<ul>
 					<li>ensure that "Extension Pack for Java" is installed. This includes 6 extensions that are needed to run the tests</li><br>
 					<li>Also install the extension "Cucumber for Visual Studio Code."</li><br>		
 				</ul>
-			<li>If there are any issues run "java:Clean Java Language Server Workspace" in the Command Palette | <a href="(https://code.visualstudio.com/docs/editor/extension-marketplace#:~:text=You%20can%20browse%20and%20install,Ctrl%2BShift%2BX)." target="_blank">Help</a></li><br>
+			<li>If there are any issues run "java:Clean Java Language Server Workspace" in the Command Palette | <a href="https://code.visualstudio.com/docs/editor/extension-marketplace#:~:text=You%20can%20browse%20and%20install,Ctrl%2BShift%2BX)." target="_blank">Help</a></li><br>
 		</ul>
 	<li>For Eclipse</li><br>
 		<ul>
