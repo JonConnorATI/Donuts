@@ -82,7 +82,7 @@ I have structured the framework like this:
 
 Once we've written all the Feature files, Step definitions and Page Methods we need a Test Runner. We specify in this Runner which Features to run and the folder where the steps are. dryRun is either true or false and if its true the code just runs the cucumber side of things and doesn't open the browser. Monochrome is either True of False, and it's something to do with the way the text displays in the console, if you set it to false, you get an output in the console with lots of weird characters. Plugin is to do with reports and "pretty" means they are formatted nicely!! Publish is either true or false and if it's false you don't get a report. Below is an image of the file.
 
-![alt text](Resources/Test Runner.png) 
+![alt text](Resources/TestRunner.png) 
 
 The test runner is needed to run the tests, the way its set now it will run all the tests in the Features folder, but we can be specific and pick certain files, just alter the path
 
@@ -94,7 +94,7 @@ We can be more specific by using tags. If we just want the features to run that 
 
 Then only features or scenarios tagged with @regression will run. If you tag a feature all the scenarios will run but if you don't want all the scenarios to run then don't tag the feature just the scenarios.
 
-![alt text](Resources/Test Tags.PNG)
+![alt text](Resources/TestTags.PNG)
 
 So once the runner is set up to kick off a run:
 
@@ -104,7 +104,7 @@ So once the runner is set up to kick off a run:
 
 * In Eclipse, right click the runner file then Run as JUnit test
 
-![alt text](Resources/Run Test.png)
+![alt text](Resources/RunTest.png)
 
 The runner works out what scenarios to run from the features, for each `Given`, `When`, `Then` step it finds the code to run in the `stepDefinition` files this is when Java and Selenium takes over and each step definition calls the appropriate `baseMethods`, `commonMethods` and `pageMethods` from `src/main/java` 
 
