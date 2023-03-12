@@ -1,13 +1,13 @@
 # offBeatDonuts
 This is a Cucumber test framework that I've created to show potential employers my knowledge and help anyone interested in UI Automation testing.
 
-I chose this web site as it has some good features to practice on. Also, its a bit temperamental when switching between pages so the tests have to be robust and able to handle behaviour that may or may not happen. Its all good fun.
+I chose this web site as it has some good features to practice on. Also, it is a bit temperamental when switching between pages so the tests have to be robust and able to handle behaviour that may or may not happen. All good fun.
 
-If you don't know anything about java and selenium, by all means have a look in this repository, clone it and have a play around. If you would like some learning resources, this free course on Udemy is where I started [Course Information](https://www.udemy.com/course/automateseleniumusingjava/).
+If you don't know anything about java and selenium, by all means have a look in this repository, clone it and have a play around. If you would like some learning resources, this free course on [Udemy](https://www.udemy.com/course/automateseleniumusingjava/) is where I started.
 
 If you'd like to know more about Cucumber and Gherkin please check this [web resource](https://jonconnorati.github.io/MyBDD_version1.github.io/) out that I created for my take on the subject. 
 
-There's also a project I created with the same tests but using TestNG rather than Cucumber. [View](https://github.com/JonConnorATI/donutsPageObjectModel)
+There's also a project I created with the same tests but using TestNG rather than Cucumber. [View it here in GitHub](https://github.com/JonConnorATI/donutsPageObjectModel)
   
 
 ## What is this repository for? ###
@@ -16,7 +16,7 @@ Practicing UI automation
 ## What you will need
 * Jdk 18 [Download](https://adoptium.net/en-GB/temurin/releases/?version=18)
 
-* Maven latest version [Download](https://maven.apache.org/download.cgi) - [How to install](https://maven.apache.org/install.html)
+* Maven latest version [Download](https://maven.apache.org/download.cgi) & [How to install](https://maven.apache.org/install.html)
 
 Once installed verify your version by running the following commands in your terminal:  
     
@@ -32,19 +32,19 @@ You will need an editor to use the Framework. There are loads out there. My pers
 
 ## How do I get set up? ###
 
-Clone the repository, to a folder in your machine [Instructions](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
+Clone the repository, to a folder in your machine [See Instructions here if you're not familiar](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
 		
 
 <ul>
 	<li>For VS Code</li><br>
 		<ul>
 			<li>From VS Code open the Folder containing the framework</li><br>
-			<li>From the Extensions | <a href="https://code.visualstudio.com/docs/editor/extension-marketplace#:~:text=You%20can%20browse%20and%20install,Ctrl%2BShift%2BX)." target="_blank">Help</a></li><br>
+			<li>From the Extensions | <a href="https://code.visualstudio.com/docs/editor/extension-marketplace" target="_blank">Help</a></li><br>
 				<ul>
 					<li>ensure that "Extension Pack for Java" is installed. This includes 6 extensions that are needed to run the tests</li><br>
 					<li>Also install the extension "Cucumber for Visual Studio Code."</li><br>		
 				</ul>
-			<li>If there are any issues run "java:Clean Java Language Server Workspace" in the Command Palette | <a href="https://code.visualstudio.com/docs/editor/extension-marketplace#:~:text=You%20can%20browse%20and%20install,Ctrl%2BShift%2BX)." target="_blank">Help</a></li><br>
+			<li>If there are any issues run "java:Clean Java Language Server Workspace" in the Command Palette | <a href="https://code.visualstudio.com/api/ux-guidelines/command-palette" target="_blank">Help</a></li><br>
 		</ul>
 	<li>For Eclipse</li><br>
 		<ul>
@@ -56,8 +56,16 @@ Clone the repository, to a folder in your machine [Instructions](https://docs.gi
 The POM.xls file included in the repository has all the other plug ins and dependencies required, however you may need to force the install.
 
 <ul>
-	<li>In VS Code - Go to View>Command Pallete>Search for "java:Clean Java Language Server Workspace" confirm you want it run. The project will reset and at the bottom of the Explorer tab there should be a tab "Maven" Open this select Lifecycle>Clean then when that's finished, Lifecycle>Install</li><br>
-	<li>In Eclipse - Go to the pom.xml file, right click it and select Maven>Update Project>tick Force update of snapshots>OK. When that has finished right click the pom.xml file again and select Run As>Maven Clean then when that's finished Run As>Maven Install.</li><br>
+	<li>In VS Code</li><br>
+		<ul>
+			<li>Go to View>Command Pallete>Search for "java:Clean Java Language Server Workspace" confirm you want it run.</li><br>
+			<li>The project will reset and at the bottom of the Explorer tab there should be a tab "Maven" Open this select Lifecycle>Clean then when that's finished, Lifecycle>Install.</li><br>
+		</ul>
+	<li>In Eclipse</li><br>
+		<ul>
+			<li>Go to the pom.xml file, right click it and select Maven>Update Project>tick Force update of snapshots>OK.</li><br>
+			<li>When that has finished right click the pom.xml file again and select Run As>Maven Clean then when that's finished Run As>Maven Install.</li><br>
+		</ul		
 </ul> 
 
 ## Do I need to download a WebDriver? 
@@ -106,6 +114,7 @@ So once the runner is set up to kick off a run:
 
 ![alt text](Resources/RunTest.png)
 
+
 The runner works out what scenarios to run from the features, for each `Given`, `When`, `Then` step it finds the code to run in the `stepDefinition` files this is when Java and Selenium takes over and each step definition calls the appropriate `baseMethods`, `commonMethods` and `pageMethods` from `src/main/java` 
 
 The project is set to run 'headless' [(More Information here)](https://smartbear.com/blog/selenium-tests-headless/) which means you wont see the browser window. If you want to run it in your browser window, simply comment out the `ops.addArguments("--headless");` line in the `BaseMethods.java` file like so,
@@ -114,7 +123,7 @@ The project is set to run 'headless' [(More Information here)](https://smartbear
 
 ## What Next
 
-I hope this has been helpful and you've successfully installed and ran the tests. You can now point this framework at any website and automate tests by writing your own feature files, step definitions and page methods.
+I hope this has been helpful and you've successfully installed and ran the tests. You can now point this framework at any web site and automate tests by writing your own feature files, step definitions and page methods.
 
 If you get stuck there's unlimited resources to tap into on the web. A big part of becoming an automation test engineer is finding out how to do things yourself. I come across automation scenarios every day where I don't know what to do to overcome an issue, so I just type `Selenium Java ....my issue...` into a google search, there's usually hundreds of others who've had the same problem.
 
