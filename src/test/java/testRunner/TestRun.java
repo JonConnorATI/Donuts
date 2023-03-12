@@ -23,4 +23,5 @@ import io.cucumber.junit.CucumberOptions;
 
 public class TestRun {
 
+	//No code - keep this empty
 }
