@@ -40,6 +40,7 @@ public class BaseMethods {
 
 					ChromeOptions ops = new ChromeOptions();
 					ops.addArguments("--disable-notifications");
+					ops.addArguments("--remote-allow-origins=*");
 					ops.addArguments("--headless");
 					ops.addArguments("--no-sandbox");
 					ops.addArguments("--disable-dev-shm-usage");
