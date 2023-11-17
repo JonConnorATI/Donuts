@@ -30,10 +30,19 @@ public class StepsOrderNow {
 		OrderNowPage.CheckButtonNumber("1", string);
 	}
 
-	@When("I select Next steps")
-	public void i_select_next_steps() {
-		OrderNowPage.selectNextSteps(1);
+	/*
+	 * @When("I select Next steps") public void i_select_next_steps() {
+	 * OrderNowPage.selectNextSteps(1); }
+	 */
+	
+
+	@When("I select Next Steps in Section {int}")
+	public void i_select_next_steps_in_section(Integer int1) {
+		OrderNowPage.selectNextSteps(int1);
 	}
+
+
+
 
 	@Then("I should see these <items> in the Boxes summary")
 	public void i_should_see_these_items_in_the_boxes_summary(io.cucumber.datatable.DataTable dataTable) {
@@ -80,10 +89,20 @@ public class StepsOrderNow {
 	public void add_candles() {
 		OrderNowPage.addCandles();
 	}
-
+	
+	@And("add luxury candles")
+	public void add_luxury_candles() {
+		OrderNowPage.luxuryScenarioAddCandles();
+	}
+	
 	@Given("a message {string}")
 	public void a_message(String string) {
 		OrderNowPage.addMessage(string);
+	}
+
+	@Given("a luxury message {string}")
+	public void a_luxury_message(String string) {
+		OrderNowPage.addLuxuryMessage(string);
 	}
 
 	@Given("add a card")

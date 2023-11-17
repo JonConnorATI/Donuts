@@ -41,6 +41,7 @@ public class BaseMethods {
 					ChromeOptions ops = new ChromeOptions();
 					ops.addArguments("--disable-notifications");
 					ops.addArguments("--remote-allow-origins=*");
+					//ops.addArguments("--disable-popup-blocking");
 					ops.addArguments("--headless");
 					ops.addArguments("--no-sandbox");
 					ops.addArguments("--disable-dev-shm-usage");
@@ -68,6 +69,7 @@ public class BaseMethods {
 			System.out.println("Unable to load browser! - Exception: " + e.getMessage());
 		} finally {
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+			
 		}
 		return driver;
 	}

@@ -20,6 +20,14 @@ public class CommonMethods extends BaseMethods {
 		new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.elementToBeClickable(locator))
 				.click();
 	}
+	
+	public static void ChkClick(By locator) {
+		if (isElementPresent(By.xpath("//div[@data-testid='POPUP']")))
+			Click(By.xpath("//button[text()='NO THANKS']"));
+		if (isElementPresent(By.id("cookiescript_accept")))
+			Click(By.id("cookiescript_accept"));
+		Click(locator);
+	}
 
 	// Wait for an element to be present
 	public static void WaitForElementToBePresent(By locator) {
@@ -78,7 +86,8 @@ public class CommonMethods extends BaseMethods {
 		WebElement element = driver.findElement((locator));
 		String Actual = element.getText();
 		System.out.println("Expected is: " + string + " - Actual is: " + Actual);
-		Assert.assertEquals(string, Actual);
+		//Assert.assertEquals(string, Actual);
+		Assert.assertEquals(Actual, string);
 
 	}
 

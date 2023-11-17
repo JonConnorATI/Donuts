@@ -3,6 +3,7 @@ package pageMethods;
 import static org.junit.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import commonMethods.CommonMethods;
 
@@ -10,13 +11,13 @@ import commonMethods.CommonMethods;
 public class HomePage extends CommonMethods {
 
 	public static void acceptCookies() {
-		WaitForElementToBePresent(By.id("cookiescript_accept"));
-
+		
+		WaitForElementToBePresent(By.id("cookiescript_injected"));
+		
 		if (isElementPresent(By.xpath("//div[@data-testid='POPUP']")))
 			Click(By.xpath("//button[text()='NO THANKS']"));
 		if (isElementPresent(By.id("cookiescript_accept")))
-			Click(By.id("cookiescript_accept"));
-
+			JSClick(By.id("cookiescript_accept"));
 	}
 
 	public static void CheckUrl() {
@@ -24,7 +25,7 @@ public class HomePage extends CommonMethods {
 		String Actual = driver.getCurrentUrl();
 		assertEquals(Actual, URL);
 	}
-
+	
 	
 
 }

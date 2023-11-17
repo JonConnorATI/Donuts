@@ -98,27 +98,27 @@ public class ShoppingCartPage extends CommonMethods {
 	}
 
 	public static void CheckLuxuryCartTextField8(String string) {
-		checkForPresenceOfText(By.xpath("(//span[@class='product-remove'])[3]"), string);
-		
-	}
-
-	public static void CheckLuxuryCartTextField9(String string) {
 		checkForPresenceOfText(By.xpath("(//td[@class='product-name']/a)[4]"), string);
 		
 	}
 
-	public static void CheckLuxuryCartTextField10(String string) {
+	public static void CheckLuxuryCartTextField9(String string) {
 		checkForPresenceOfText(By.xpath("(//dd[@class='variation-Selection']/p)[3]"), string);
 		
 	}
 
+	public static void CheckLuxuryCartTextField10(String string) {
+		checkForPresenceOfSomeText(By.xpath("(//td[@class='product-name']/a)[5]"), string);
+		
+	}
+
 	public static void CheckLuxuryCartTextField11(String string) {
-		checkForPresenceOfText(By.xpath("(//span[@class='product-remove'])[4]"), string);
+		checkForPresenceOfText(By.xpath("(//dd[@class='variation-Selection']/p)[4]"), string);
 		
 	}
 
 	public static void CheckLuxuryCartTextField12(String string) {
-		checkForPresenceOfText(By.xpath("(//td[@class='product-name']/a)[5]"), string);
+		checkForPresenceOfText(By.xpath("(//td[@class='product-name']/a)[6]"), string);
 		
 	}
 	
