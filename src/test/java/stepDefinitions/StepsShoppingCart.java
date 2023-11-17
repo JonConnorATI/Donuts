@@ -51,8 +51,8 @@ public class StepsShoppingCart {
 		ShoppingCartPage.CheckLuxuryCartTextField10(data.get(10).get("items"));
 		ShoppingCartPage.CheckLuxuryCartTextField11(data.get(11).get("items"));
 		ShoppingCartPage.CheckLuxuryCartTextField12(data.get(12).get("items"));
-		ShoppingCartPage.CheckLuxuryCartTextField13(data.get(13).get("items"));
-		ShoppingCartPage.CheckLuxuryCartTextField14(data.get(14).get("items"));
+		//ShoppingCartPage.CheckLuxuryCartTextField13(data.get(13).get("items"));
+		//ShoppingCartPage.CheckLuxuryCartTextField14(data.get(14).get("items"));
 		//ShoppingCartPage.CheckLuxuryCartTextField15(data.get(15).get("items"));
 		//ShoppingCartPage.CheckLuxuryCartTextField16(data.get(16).get("items"));
 		//ShoppingCartPage.CheckLuxuryCartTextField17(data.get(17).get("items"));

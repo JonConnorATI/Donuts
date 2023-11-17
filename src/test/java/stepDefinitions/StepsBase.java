@@ -16,7 +16,7 @@ public class StepsBase extends CommonMethods {
 	}
 	
 	@Given("I open the website")
-	public void i_open_the_website()  {
+	public void i_open_the_website() {
 		navigateToHomePage();
 		waitForPageLoaded(driver);
 		HomePage.acceptCookies();
