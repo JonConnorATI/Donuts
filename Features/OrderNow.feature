@@ -12,7 +12,7 @@ Then I should be in the order now page and see <text>
 |text														|
 |ORDER DONUTS IN JUST 4 STEPS-	|
 
-@test
+
 Scenario: Economy, add to my cart and check whats been added
 
 When I select the donuts "Classic Glazed Dozen" from the Offbeat Dozen variety
