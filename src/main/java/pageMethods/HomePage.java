@@ -12,7 +12,7 @@ public class HomePage extends CommonMethods {
 
 	public static void acceptCookies() {
 		
-		WaitForElementToBePresent(By.id("cookiescript_injected"));
+		//WaitForElementToBePresent(By.id("cookiescript_injected"));
 		
 		if (isElementPresent(By.xpath("//div[@data-testid='POPUP']")))
 			Click(By.xpath("//button[text()='NO THANKS']"));
