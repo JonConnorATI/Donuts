@@ -78,7 +78,7 @@ public class BaseMethods {
 	public static void navigateToHomePage() {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-		String homePage = "https://offbeatdonuts.com/";
+		String homePage = "https://offbeatdonuts.com/order-now";
 		driver.get(homePage);
 
 	}
