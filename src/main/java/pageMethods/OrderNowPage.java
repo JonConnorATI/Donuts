@@ -150,9 +150,9 @@ public class OrderNowPage extends CommonMethods {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", Element);
 
-		WebElement candleCheckBox = driver.findElement(By.xpath("(//h4[text() ='Add Candles'])[7]"));
+		WebElement candleCheckBox = driver.findElement(By.xpath("(//h4[text() ='Add Candles'])[11]"));
 		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.visibilityOf(candleCheckBox));
-		ChkClick(By.xpath("(//h4[text() ='Add Candles'])[7]"));
+		ChkClick(By.xpath("(//h4[text() ='Add Candles'])[11]"));
 
 	}
 
@@ -170,7 +170,7 @@ public class OrderNowPage extends CommonMethods {
 
 	// adds message to a donut
 	public static void addLuxuryMessage(String string) {
-		String xpath = "(//h4[text() ='Add Message To A Donut:'])[8]";
+		String xpath = "(//input[@placeholder='Happy Birthday'])[2]";
 
 		WebElement Element = driver.findElement(By.xpath("(//h2[@class='title'])[3]"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -181,7 +181,7 @@ public class OrderNowPage extends CommonMethods {
 				.until(ExpectedConditions.elementToBeClickable(addMsgCheckBox));
 		addMsgCheckBox.click();
 
-		enterText(By.xpath("(//div[@data-extra-type='pipped_name']//input[@type='text'])[8]"), string);
+		enterText(By.xpath(xpath), string);
 
 	}
 	
@@ -217,14 +217,14 @@ public class OrderNowPage extends CommonMethods {
 
 	// adds a message to the card
 	public static void addGreeting(String string) {
-		enterText(By.xpath("(//div[@class='customise']//textarea)[8]"), string);
+		enterText(By.xpath("(//textarea[@placeholder='Happy Birthday!'])[2]"), string);
 
 	}
 
 	// adds a bow
 	public static void addBow(String string) {
-		Click(By.xpath("(//h4[text() ='Add A Bow:'])[9]"));
-		Click(By.xpath("(//label[contains(text(),'" + string + "')])[9]"));
+		Click(By.xpath("(//h4[text() ='Add A Bow:'])[13]"));
+		Click(By.xpath("(//label[contains(text(),'" + string + "')])[13]"));
 
 	}
 

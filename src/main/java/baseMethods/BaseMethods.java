@@ -42,7 +42,7 @@ public class BaseMethods {
 					ops.addArguments("--disable-notifications");
 					ops.addArguments("--remote-allow-origins=*");
 					//ops.addArguments("--disable-popup-blocking");
-					ops.addArguments("--headless");
+					//ops.addArguments("--headless");
 					ops.addArguments("--no-sandbox");
 					ops.addArguments("--disable-dev-shm-usage");
 					ops.addArguments("--window-size=1920,1080");
